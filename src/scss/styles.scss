@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+
+* {
+    margin: 0; padding: 0; box-sizing: border-box;
+    font-family: 'Kanit', sans-serif, FontAwesome;
+}
+
+/* Color Palette */
+$redCrayola: #ED254E;
+$naplesYellow: #F9DC5C;
+$teaGreen: #C2EABD;
+$oxfordBlue: #011936;
+$Charcoal: #465362;
+
+body {
+    background-color: $oxfordBlue;   
+    .navMenu {
+        text-align: center;
+        padding: 0.5rem;     
+        .active { color: #ED254E; text-shadow: 0px 0px 8px rgba(237, 37, 78, 1); }       
+        a {
+            color: white;
+            font-size: 16px; text-decoration: none; text-transform: uppercase;  
+            padding: 0 1em; border-right: 2px dotted $redCrayola;         
+            transition: all 0.2s ease-in-out;
+            &:last-child { border-right: 0; }
+            &:hover { color: $redCrayola; }
+        }
+    }
+    
+    .container, .color-properties, .color-code-preview, .preview, .color-code-value {
+        display: flex; align-items: center; justify-content: center; flex-wrap: wrap; flex-direction: row;
+    }
+    .container {
+        min-height: 90vh; gap: 15px;
+
+        .card-container {            
+            width: auto; max-width: 600px; min-width: 450px; height: auto; position: relative;
+            padding: 1em; border-radius: 10px; box-shadow: 0px 0px 5px 5px $Charcoal;
+            background-color: $teaGreen; text-align: center;
+
+            #title {
+                font-size: 15px; font-weight: bold;
+                color: $oxfordBlue; user-select: none;
+            }
+            span { cursor: default; user-select: none; }
+
+            .color-properties {
+                margin: 10px 0;
+                .column {
+                    width: 50%; height: 128px;
+                    padding: 5px; border-radius: 5px; 
+                    background-color: $redCrayola; color: white; border: 2px solid $oxfordBlue; 
+                    &:first-child { border-right: 0; border-bottom: 0; border-radius: 5px 0 0 0; }
+                    &:nth-child(2) { border-radius: 0 5px 0 0; border-left: 2px dotted $oxfordBlue; border-bottom: 0;}
+
+                    .input-group {
+                        align-items: center; justify-content: center;      
+                        margin-bottom: 5px;                         
+                        label {      
+                            width: 100%; font-size: 15px;
+                            border-radius: 5px !important; margin-bottom: 5px; border: 1px solid $oxfordBlue;
+                        }   
+                        .form-range {
+                            width: 85%; height: 25px; cursor: pointer;  
+                            margin-right: 5px;                                                                      
+                        }
+                        input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+                            -webkit-appearance: none; margin: 0;
+                        }
+                        input[type=number] {
+                            width: 25px; height: 25px;
+                            appearance: none; -moz-appearance: textfield;
+                            text-align: center; font-size: 9px;
+                            border: 0; margin: 0 !important; border-radius: 5px !important;
+                        }  
+                        #alpha-bg {
+                            background-color: white;
+                            background: url(../img/alpha.webp) no-repeat center center / cover;
+                            color: black
+                        }
+                    }                   
+                    &:last-child {
+                        width: 100%; height: auto;
+                        border-radius: 0 0 5px 5px; border-top: 2px dotted $oxfordBlue;
+                        label {
+                            width: auto; height: 25px;
+                            border: 0; margin: 0;
+                        }
+                        input {
+                            width: 100%; height: 25px;
+                            margin: 0; border-radius: 5px !important;
+                            border: 1px solid $oxfordBlue;
+                            text-transform: uppercase; text-align: center;                            
+                        }
+                    }                   
+                }
+            }
+            .color-code-preview {
+                width: 100%;        
+                .preview {
+                    width: 150px; height: 150px;
+                    border-radius: 50%;
+                    background-color: $naplesYellow; border: 2px solid $oxfordBlue;
+                }
+                span {
+                    font-size: 16px; letter-spacing: 1px;
+                    color: $oxfordBlue; opacity: .5; user-select: none;
+                }
+            }
+            .color-code-value {
+                gap: 10px; margin-top: 10px;
+
+                .input-group {
+                    width: fit-content; flex-wrap: nowrap;
+                    justify-content: center; align-items: center;
+                    input {
+                        width: 150px; height: 35px; flex: none;
+                        font-size: 12px; text-align: center;   
+                        border: 1px solid $oxfordBlue; border-right: 0; cursor: copy;
+                        &::selection { background-color: $naplesYellow; }                    
+                    }
+                    button {
+                        width: 30px; height: 35px; 
+                        line-height: 1; font-size: 11px;
+                        background-color: $redCrayola; border: 1px solid $oxfordBlue; border-left: 0;
+                        margin-left: 0 !important; padding: 0; transition: 0.25s;
+                        &:hover { 
+                            background-color: var(--bs-btn-hover-bg); font-size: 13px;
+                        }
+                    }
+                    &:last-child input {
+                        text-transform: uppercase;
+                        &::placeholder { text-transform: none; }
+                    }
+                }
+            }
+        }        
+    }
+}
