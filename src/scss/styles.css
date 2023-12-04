@@ -1,0 +1,225 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Kanit", sans-serif, FontAwesome;
+}
+
+/* Color Palette */
+body {
+  background-color: #011936;
+}
+body .navMenu {
+  text-align: center;
+  padding: 0.5rem;
+}
+body .navMenu .active {
+  color: #ED254E;
+  text-shadow: 0px 0px 8px rgb(237, 37, 78);
+}
+body .navMenu a {
+  color: white;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 0 1em;
+  border-right: 2px dotted #ED254E;
+  transition: all 0.2s ease-in-out;
+}
+body .navMenu a:last-child {
+  border-right: 0;
+}
+body .navMenu a:hover {
+  color: #ED254E;
+}
+body .container, body .color-properties, body .color-code-preview, body .preview, body .color-code-value {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+body .container {
+  min-height: 90vh;
+  gap: 15px;
+}
+body .container .card-container {
+  width: auto;
+  max-width: 600px;
+  min-width: 450px;
+  height: auto;
+  position: relative;
+  padding: 1em;
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px 5px #465362;
+  background-color: #C2EABD;
+  text-align: center;
+}
+body .container .card-container #title {
+  font-size: 15px;
+  font-weight: bold;
+  color: #011936;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+body .container .card-container span {
+  cursor: default;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+body .container .card-container .color-properties {
+  margin: 10px 0;
+}
+body .container .card-container .color-properties .column {
+  width: 50%;
+  height: 128px;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: #ED254E;
+  color: white;
+  border: 2px solid #011936;
+}
+body .container .card-container .color-properties .column:first-child {
+  border-right: 0;
+  border-bottom: 0;
+  border-radius: 5px 0 0 0;
+}
+body .container .card-container .color-properties .column:nth-child(2) {
+  border-radius: 0 5px 0 0;
+  border-left: 2px dotted #011936;
+  border-bottom: 0;
+}
+body .container .card-container .color-properties .column .input-group {
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+body .container .card-container .color-properties .column .input-group label {
+  width: 100%;
+  font-size: 15px;
+  border-radius: 5px !important;
+  margin-bottom: 5px;
+  border: 1px solid #011936;
+}
+body .container .card-container .color-properties .column .input-group .form-range {
+  width: 85%;
+  height: 25px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+body .container .card-container .color-properties .column .input-group input::-webkit-outer-spin-button, body .container .card-container .color-properties .column .input-group input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+body .container .card-container .color-properties .column .input-group input[type=number] {
+  width: 25px;
+  height: 25px;
+  -webkit-appearance: none;
+          appearance: none;
+  -moz-appearance: textfield;
+  text-align: center;
+  font-size: 9px;
+  border: 0;
+  margin: 0 !important;
+  border-radius: 5px !important;
+}
+body .container .card-container .color-properties .column .input-group #alpha-bg {
+  background-color: white;
+  background: url(../img/alpha.webp) no-repeat center center/cover;
+  color: black;
+}
+body .container .card-container .color-properties .column:last-child {
+  width: 100%;
+  height: auto;
+  border-radius: 0 0 5px 5px;
+  border-top: 2px dotted #011936;
+}
+body .container .card-container .color-properties .column:last-child label {
+  width: auto;
+  height: 25px;
+  border: 0;
+  margin: 0;
+}
+body .container .card-container .color-properties .column:last-child input {
+  width: 100%;
+  height: 25px;
+  margin: 0;
+  border-radius: 5px !important;
+  border: 1px solid #011936;
+  text-transform: uppercase;
+  text-align: center;
+}
+body .container .card-container .color-code-preview {
+  width: 100%;
+}
+body .container .card-container .color-code-preview .preview {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: #F9DC5C;
+  border: 2px solid #011936;
+}
+body .container .card-container .color-code-preview span {
+  font-size: 16px;
+  letter-spacing: 1px;
+  color: #011936;
+  opacity: 0.5;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+body .container .card-container .color-code-value {
+  gap: 10px;
+  margin-top: 10px;
+}
+body .container .card-container .color-code-value .input-group {
+  width: -moz-fit-content;
+  width: fit-content;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+body .container .card-container .color-code-value .input-group input {
+  width: 150px;
+  height: 35px;
+  flex: none;
+  font-size: 12px;
+  text-align: center;
+  border: 1px solid #011936;
+  border-right: 0;
+  cursor: copy;
+}
+body .container .card-container .color-code-value .input-group input::-moz-selection {
+  background-color: #F9DC5C;
+}
+body .container .card-container .color-code-value .input-group input::selection {
+  background-color: #F9DC5C;
+}
+body .container .card-container .color-code-value .input-group button {
+  width: 30px;
+  height: 35px;
+  line-height: 1;
+  font-size: 11px;
+  background-color: #ED254E;
+  border: 1px solid #011936;
+  border-left: 0;
+  margin-left: 0 !important;
+  padding: 0;
+  transition: 0.25s;
+}
+body .container .card-container .color-code-value .input-group button:hover {
+  background-color: var(--bs-btn-hover-bg);
+  font-size: 13px;
+}
+body .container .card-container .color-code-value .input-group:last-child input {
+  text-transform: uppercase;
+}
+body .container .card-container .color-code-value .input-group:last-child input::-moz-placeholder {
+  text-transform: none;
+}
+body .container .card-container .color-code-value .input-group:last-child input::placeholder {
+  text-transform: none;
+}/*# sourceMappingURL=styles.css.map */

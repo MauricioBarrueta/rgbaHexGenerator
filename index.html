@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="src/scss/styles.css">
+    <title>Style Generator: rgb-rgba-Hex</title>
+    <link rel="icon" type="image/x-icon" href="src/img/favicon.ico">
+</head>
+<body>
+    <nav class="navMenu">
+        <a href="https://mauriciobarrueta.github.io/boxShadowGenerator/">Box Shadow</a>
+        <a href="https://mauriciobarrueta.github.io/textShadowGenerator/">Text Shadow</a>
+        <a href="https://mauriciobarrueta.github.io/borderGenerator/">Border</a>
+        <a href="https://mauriciobarrueta.github.io/borderRadiusGenerator/">Border Radius</a>
+        <a href="https://mauriciobarrueta.github.io/transformGenerator/">CSS Transform</a>
+        <a href="https://mauriciobarrueta.github.io/filterGenerator/">Image Filter</a>
+        <a href="https://mauriciobarrueta.github.io/gradientBgGenerator/">CSS Gradient</a>
+        <a class="active">Color Picker</a>
+      </nav>
+
+    <div class="container">
+        <div class="card-container">
+            <span id="title">Personaliza los valores para generar el código del color con RGB, RGBA y Hex:</span>
+            <div class="color-properties">
+                <div class="column">
+                    <div class="input-group">
+                        <label for="red" class="form-label" style="background: #ff0000;">Red</label>
+                        <input type="range" class="form-range" min="0" max="255" step="1" value="5" id="red" oninput="redRange.value=red.value">
+                        <input type="number" id="redRange" min="0" max="255" step="1" value="5" oninput="red.value=redRange.value">
+                    </div>  
+                    <div class="input-group">
+                        <label for="blue" class="form-label" style="background: #0000ff;">Blue</label>
+                        <input type="range" class="form-range" min="0" max="255" step="1" value="5" id="blue" oninput="blueRange.value=blue.value">
+                        <input type="number" id="blueRange" min="0" max="255" step="1" value="5" oninput="blue.value=blueRange.value">
+                    </div>    
+                </div>
+                <div class="column">
+                    <div class="input-group">
+                        <label for="green" class="form-label" style="background: #00ff00; color: black;">Green</label>
+                        <input type="range" class="form-range" min="0" max="255" step="1" value="5" id="green" oninput="greenRange.value=green.value">
+                        <input type="number" id="greenRange" min="0" max="255" step="1" value="5" oninput="green.value=greenRange.value">
+                    </div>  
+                    <div class="input-group">
+                        <label for="alpha" class="form-label" id="alpha-bg">Alpha</label>
+                        <input type="range" class="form-range" min="0" max="1" step="0.05" value="5" id="alpha" oninput="alphaRange.value=alpha.value">
+                        <input type="number" id="alphaRange" min="0" max="1" step="1" value="5" oninput="alpha.value=alphaRange.value">
+                    </div>    
+                </div>                
+                <div class="column">
+                    <div class="input-group border-color">
+                        <label class="form-label" for="border-color">Hex Code</label>
+                        <input type="text" id="hex-code" maxlength="7" placeholder="#000000">
+                    </div>
+                </div>  
+            </div>
+
+            <div class="color-code-preview">
+                <div class="preview"><span>Vista previa</span></div>
+            </div>
+
+            <div class="color-code-value">
+                <div class="input-group">
+                    <input type="text" class="form-control" id="rgbInput" placeholder="rbg()" aria-describedby="rgbButton" readonly>
+                    <button class="btn btn-danger" type="button" id="rgbButton" title="RGB">&#xf0c5;</button>
+                  </div>
+                  <div class="input-group">
+                    <input type="text" class="form-control" id="rgbaInput" placeholder="rgba()" aria-describedby="rgbaButton" readonly>
+                    <button class="btn btn-danger" type="button" id="rgbaButton" title="RGBA">&#xf0c5;</button>
+                  </div>
+                  <div class="input-group">
+                    <input type="text" class="form-control" id="hexInput" placeholder="Hex: #" aria-describedby="hexButton" readonly>
+                    <button class="btn btn-danger" type="button" id="hexButton" title="Hex">&#xf0c5;</button>
+                  </div>            
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="src/js/main.js"></script>
+</body>
+</html>
