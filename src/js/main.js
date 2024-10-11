@@ -1,12 +1,8 @@
-const red = document.getElementById('red'), redValue = document.getElementById('redRange'),
-    green = document.getElementById('green'), greenValue = document.getElementById('greenRange'),
-    blue = document.getElementById('blue'), blueValue = document.getElementById('blueRange'),
-    alpha = document.getElementById('alpha'), alphaValue = document.getElementById('alphaRange'),
+const red = document.getElementById('red'), redValue = document.getElementById('redRange'), green = document.getElementById('green'), greenValue = document.getElementById('greenRange'),
+    blue = document.getElementById('blue'), blueValue = document.getElementById('blueRange'), alpha = document.getElementById('alpha'), alphaValue = document.getElementById('alphaRange'),
     hexCode = document.getElementById('hex-code') 
-
-const colorProperties = document.querySelectorAll('.color-properties input[type=range], input[type=number]'),
-    bgColorPreview = document.querySelector('.preview'), rgbInput = document.getElementById('rgbInput'), rgbaInput = document.getElementById('rgbaInput'),
-    hexInput = document.getElementById('hexInput')
+const colorProperties = document.querySelectorAll('.color-properties input[type=range], input[type=number]'), bgColorPreview = document.querySelector('.preview'), 
+    rgbInput = document.getElementById('rgbInput'), rgbaInput = document.getElementById('rgbaInput'), hexInput = document.getElementById('hexInput')
 
 window.onload = () => {
     resetElements()
@@ -20,17 +16,15 @@ colorProperties.forEach(element => {
 
 /* Función que convierte del modelo RGB al Hexadecimal */
 const rgbToHexConverter = (r, g, b) => {
-    return "#" + (1 << 24 | r << 16 | g << 8 | b).toString(16).slice(1);
+    return "#" + (1 << 24 | r << 16 | g << 8 | b).toString(16).slice(1)
 }
 
 /* Función que convierte del modelo Hexadecimal al modelo RGB */
 const hexToRgbConverter = (hex) => {
-    var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+    var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex)
     return result ? {
-      r: parseInt(result[1], 16),
-      g: parseInt(result[2], 16),
-      b: parseInt(result[3], 16)
-    } : null;
+      r: parseInt(result[1], 16), g: parseInt(result[2], 16), b: parseInt(result[3], 16)
+    } : null
 }
 
 /* Convierte el valor hexadecimal al modelo rgb-rgba cada que el valor del elemento 'input text' cambia */
