@@ -102,7 +102,7 @@ body .container .card-container .color-properties .column .input-group label {
   margin-bottom: 0;
 }
 body .container .card-container .color-properties .column .input-group .form-range::-moz-range-thumb {
-  border: 1px solid #011936;
+  border: 2px solid #011936;
 }
 body .container .card-container .color-properties .column .input-group #red::-webkit-slider-thumb, body .container .card-container .color-properties .column .input-group #red::-moz-range-thumb {
   background-color: #ff0000;
