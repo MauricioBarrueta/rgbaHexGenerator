@@ -62,4 +62,5 @@ copyButtons.forEach(button => {
 
 const resetElements = () => {
     red.value = redValue.value = 249, green.value = greenValue.value = 220, blue.value = blueValue.value = 92, alpha.value = alphaValue.value = 1
+    colorCodesGenerator()
 }

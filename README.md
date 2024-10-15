@@ -5,4 +5,4 @@ tiempo se va generando el código hexadecimal del color y viceversa. Además de 
 time the hexadecimal code of the color is generated and vice versa. It's also possible to copy the color code according to the desired model.
 
 
-![colorPicker](https://github.com/user-attachments/assets/bef9fca4-19ff-4508-a1d7-018e9c9a3607)
+![colorPicker](https://github.com/user-attachments/assets/e309b164-9535-41f7-a380-fbf87b7c5a87)
