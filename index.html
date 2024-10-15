@@ -29,35 +29,36 @@
             <div class="color-properties">
                 <div class="column">
                     <div class="input-group">
-                        <label for="red" class="form-label" style="background: #ff0000;">r: Rojo</label>
+                        <label for="red" class="form-label">Red:</label>
                         <input type="range" class="form-range" min="0" max="255" step="1" value="5" id="red" oninput="redRange.value=red.value">
                         <input type="number" id="redRange" min="0" max="255" step="1" value="5" oninput="red.value=redRange.value">
                     </div>  
                     <div class="input-group">
-                        <label for="blue" class="form-label" style="background: #0000ff;">b: Azul</label>
+                        <label for="blue" class="form-label">Blue:</label>
                         <input type="range" class="form-range" min="0" max="255" step="1" value="5" id="blue" oninput="blueRange.value=blue.value">
                         <input type="number" id="blueRange" min="0" max="255" step="1" value="5" oninput="blue.value=blueRange.value">
                     </div>    
                 </div>
                 <div class="column">
                     <div class="input-group">
-                        <label for="green" class="form-label" style="background: #00ff00; color: black;">g: Verde</label>
+                        <label for="green" class="form-label">Green:</label>
                         <input type="range" class="form-range" min="0" max="255" step="1" value="5" id="green" oninput="greenRange.value=green.value">
                         <input type="number" id="greenRange" min="0" max="255" step="1" value="5" oninput="green.value=greenRange.value">
                     </div>  
                     <div class="input-group">
-                        <label for="alpha" class="form-label" id="alpha-bg">a: Transparencia</label>
+                        <label for="alpha" class="form-label" id="alpha-bg">Alpha:</label>
                         <input type="range" class="form-range" min="0" max="1" step="0.05" value="5" id="alpha" oninput="alphaRange.value=alpha.value">
                         <input type="number" id="alphaRange" min="0" max="1" step="1" value="5" oninput="alpha.value=alphaRange.value">
                     </div>    
                 </div>                
                 <div class="column">
                     <div class="input-group border-color">
-                        <label class="form-label" for="border-color">Hexadecimal</label>
+                        <label class="form-label" for="border-color">Hexadecimal:</label>
                         <input type="text" id="hex-code" maxlength="7" placeholder="#000000">
                     </div>
                 </div>  
             </div>
+            <div class="reset-container"><button class="btn btn-dark reset-btn" onclick="resetElements()">Restablecer valores</button></div>
             <div class="color-code-preview">
                 <div class="preview"><span>Vista previa</span></div>
             </div>
