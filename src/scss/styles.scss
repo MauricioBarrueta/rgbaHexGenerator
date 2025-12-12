@@ -29,7 +29,7 @@ body {
     .container {
         min-height: 90vh; 
         .card-container {            
-            width: auto; max-width: 715px; min-width: 450px; height: auto; position: relative;
+            width: 650px; height: auto; position: relative;
             padding: 1em; border-radius: 10px; box-shadow: 0px 0px 5px 5px $Charcoal;
             background-color: $teaGreen; text-align: center;
 
@@ -37,38 +37,41 @@ body {
                 font-size: 15px; font-weight: bold;
                 color: $oxfordBlue; user-select: none;
             }
-            span { cursor: default; user-select: none; }
 
             .color-properties {
-                margin: 5px 0 auto;
+                flex-direction: row; 
+                margin: 5px 0 auto;                
+                
                 .column {
                     width: 50%; height: auto;
-                    padding: 5px; border-radius: 5px; 
-                    background-color: $redCrayola; color: white; border: 2px solid $oxfordBlue; 
+                    padding: 1em 0.5rem 0.5rem 0.5rem; border: 2px solid $oxfordBlue; border-bottom: 0; 
+                    background-color: $redCrayola; color: white; text-align: center;
+
                     &:first-child { border-right: 0; border-bottom: 0; border-radius: 5px 0 0 0; }
                     &:nth-child(2) { border-radius: 0 5px 0 0; border-left: 2px dotted $oxfordBlue; border-bottom: 0; }
+                    &:nth-child(3) { padding-top: 0.5rem; }
+                    
                     .input-group {
-                        align-items: center; justify-content: center;      
-                        margin-bottom: 5px;                         
+                        display: flex; flex-direction: column; justify-content: center; margin-bottom: 5px; 
+                    
                         label {      
                             width: 100%; font-size: 15px; margin-bottom: 0;
                         }   
-                        .form-range::-moz-range-thumb { border: 2px solid $oxfordBlue; }
-                        #red::-webkit-slider-thumb, #red::-moz-range-thumb { background-color: #ff0000; } 
-                        #blue::-webkit-slider-thumb, #blue::-moz-range-thumb { background-color: #0000ff; border-color: white; }             
-                        #green::-webkit-slider-thumb, #green::-moz-range-thumb { background-color: #00ff00; }     
-                        #alpha::-webkit-slider-thumb, #alpha::-moz-range-thumb { background-color: white; }  
-                        .form-range {
-                            width: 75%; height: 25px; cursor: pointer;  
-                            margin-right: 5px;      
-                        }
+                        
+                        .input-row { display: flex; align-items: center; width: 100%; gap: 5px; }
+                        .form-range { flex: 1; height: 25px; cursor: pointer; }
+
                         input::-webkit-outer-spin-button, input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
                         input[type = number] {
                             width: 25px; height: 25px;
                             appearance: none; -moz-appearance: textfield; border: 0; margin: 0 !important; border-radius: 5px !important;
                             text-align: center; font-size: 9px;
-                        }                          
-                    }                   
+                        }
+                        
+                         span { font-size: 10px; line-height: 2; }
+
+                    }   
+
                     &:last-child {
                         width: 100%; height: auto;
                         border-radius: 0; border-top: 2px dotted $oxfordBlue; border-bottom-style: dotted;
@@ -81,42 +84,48 @@ body {
                     }                   
                 }
             }
+
             .reset-container {
-                background-color: $redCrayola; border: 2px solid $oxfordBlue; border-top: 0;
-                border-radius: 0 0 5px 5px; padding: 5px; margin-bottom: 10px;
+                background-color: $redCrayola; border: 2px solid $oxfordBlue; border-top: 0; 
+                border-radius: 0 0 5px 5px; padding: 5px; text-align: center; border-top: 2px dotted $oxfordBlue;
                 .reset-btn {
-                    background-color: $Charcoal; padding: 5px 10px;
-                    font-size: 12px;
+                    background-color: $Charcoal;
+                    padding: 5px 10px; font-size: 12px;                     
+                    &:hover { background-color: black; }  
+                    i { font-size: 10px; } 
                 }
             }
+
             .color-code-preview {
                 width: 100%;        
+                margin-top: 10px;
                 .preview {
-                    width: 135px; height: 135px;
+                    width: 115px; height: 115px;
                     border-radius: 5px; border: 2px solid $oxfordBlue;
                 }
                 span {
-                    font-size: 16px; letter-spacing: 1px;
+                    font-size: 12px; letter-spacing: 1px;
                     color: $oxfordBlue; opacity: .5; user-select: none;
                 }
             }
+
             .color-code-value {
-                margin-top: 10px; justify-content: space-around;
+                margin-top: 10px; justify-content: center; gap: 5px;
                 .input-group {
                     width: fit-content; flex-wrap: nowrap; justify-content: center; align-items: center;
                     input {
-                        width: 170px; height: 35px; flex: none;
-                        font-size: 14px; text-align: center;   
+                        width: 165px; height: 35px; flex: none;
+                        font-size: 13px; text-align: center;   
                         border: 2px solid $oxfordBlue; border-right: 0; cursor: copy;
                         &::selection { background-color: $naplesYellow; }                    
                     }
                     button {
-                        width: 35px; height: 35px; 
-                        line-height: 1; font-size: 12px;
-                        background-color: $redCrayola; border: 2px solid $oxfordBlue; border-left: 0;
-                        margin-left: 0 !important; padding: 0; transition: 0.25s;
+                        width: 30px; height: 35px; 
+                        font-size: 10px;
+                        background-color: $redCrayola; border: 2px solid $oxfordBlue; border-left-style: dotted ;
+                        padding: 0; transition: 0.25s;
                         &:hover { 
-                            background-color: var(--bs-btn-hover-bg); font-size: 13px;
+                            background-color: var(--bs-btn-hover-bg); font-size: 11px;
                         }
                     }
                     &:last-child input {
