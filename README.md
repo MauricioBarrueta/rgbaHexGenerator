@@ -4,4 +4,5 @@
 
 🔗 https://mauriciobarrueta.github.io/rgbaHexGenerator/
 
-![color](https://github.com/user-attachments/assets/bfc0830c-f77b-4b83-83f9-e1ad3045fce0)
+
+<img width="1366" height="653" alt="color" src="https://github.com/user-attachments/assets/05f55a52-9146-4dce-b8f4-00f3df22c09b" />
